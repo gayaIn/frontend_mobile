@@ -20,10 +20,8 @@ import productDetails from './src/components/product/product_details'
 import CartScreen from './src/components/cart/cart';
 import Checkout from './src/components/cart/checkout';
 import profileUser from './src/components/user/profile';
-import AddCost from './src/components/cost/cost'
-
-import {API_KEY} from 'react-native-dotenv';
-
+import Cost from './src/components/checkout/cost'
+import Ongkir from './src/components/checkout/ongkir'
 
 const homeNavigator = createStackNavigator({
   Home: Home,
@@ -37,8 +35,8 @@ const homeNavigator = createStackNavigator({
   productDetails: productDetails,
   Checkout: Checkout,
   profileUser:profileUser,
-  AddCost: AddCost,
-  
+  Ongkir : Ongkir,
+  Cost: Cost
 });
 
 const AppNavigator = createSwitchNavigator({
@@ -56,7 +54,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('key', API_KEY)
     console.disableYellowBox = true;
     return (
       <>

@@ -7,7 +7,6 @@ import {
   View,
   Dimensions,
   TextInput,
-  Alert,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
@@ -34,8 +33,8 @@ class Register extends Component {
     city: '',
     province: '',
   }
+
   onSubmit =() => {
-    console.log(this.state)
     if(this.state.name < 3){
       Alert.alert('Error','input valid name')
     }
@@ -48,6 +47,9 @@ class Register extends Component {
     if(this.state.password < 6){
       Alert.alert('Error','password more than 6 character')
     }
+    this.props.dispatch(addUser(this.state));
+    this.props.navigation.navigate('Login')
+    
 }
 
   render() {

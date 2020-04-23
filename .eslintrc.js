@@ -1,4 +1,17 @@
-module.exports = {
-  root: true,
-  extends: '@react-native-community',
-};
+module.exports = 
+  {
+    "extends": [
+        "standard",
+        "prettier",
+        "prettier/flowtype",
+        "prettier/react",
+        "prettier/standard"
+      ],
+      "plugins": [
+        "react",
+        "react-native",
+        "flowtype",
+        "prettier",
+        "standard"
+      ]
+}
